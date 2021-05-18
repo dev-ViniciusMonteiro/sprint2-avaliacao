@@ -20,4 +20,11 @@ O SGBD que deverá ser utilizado nas aplicações é o MySQL.
 Cada uma das funcionalidades deverão ser construídas em branches distintas, por exemplo uma branch para a remoção de registros e outra para a inserção, ao final do desenvolvimento dessas branches deverá ser feito o merge dela em uma branch principal criada pelo desenvolvedor não a master do repositório, após a conclusão da aplicação deverá ser aberto um PR do que foi desenvolvido  para a branch master. 
 
 O prazo para a entrega é dia 23/05/2021 às 23:59. Considera-se como entrega a abertura do PR para o repositório disponibilizado.
- 
+
+# Relação dev - pasta:
+BrenoCore: 6
+dev-ViniciusMonteiro: 3
+etn-43: 2
+GustavoCarlini: 4
+leoaugusto02: 1
+leonardosantos1: 5
