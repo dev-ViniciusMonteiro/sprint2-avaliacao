@@ -17,7 +17,7 @@ As aplicações deverão aceitar dados em formato JSON e retornar JSON. Adiciona
 
 O SGBD que deverá ser utilizado nas aplicações é o MySQL.
 
-Cada uma das funcionalidades deverão ser construídas em branches distintas, por exemplo uma branch para a remoção de registros e outra para a inserção, ao final do desenvolvimento dessas branches deverá ser feito o merge dela em uma branch principal criada pelo desenvolvedor não a master do repositório, após a conclusão da aplicação deverá ser aberto um PR do que foi desenvolvido  para a branch master. 
+Cada uma das funcionalidades deverão ser construídas em branches distintas, por exemplo uma branch para a remoção de registros e outra para a inserção, ao final do desenvolvimento dessas branches deverá ser feito o merge delas em uma branch principal criada pelo desenvolvedor não a master do repositório, após a conclusão da aplicação deverá ser aberto um PR (Pull Request) do que foi desenvolvido  para a branch master. 
 
 O prazo para a entrega é dia 23/05/2021 às 23:59. Considera-se como entrega a abertura do PR para o repositório disponibilizado.
 
