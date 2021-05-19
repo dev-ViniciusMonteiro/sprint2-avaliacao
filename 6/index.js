@@ -1,6 +1,5 @@
-const express = require('express');
-const app = express();
-app.use(express.json());
+const cExpress = require('./config/customExpress');
+const app = cExpress();
 
 const conexao = require("./api/banco-de-dados/conexao");
 const tabela = require("./api/banco-de-dados/Evaluation");
