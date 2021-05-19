@@ -2,8 +2,8 @@ const regis = require("../models/Registros");
 
 module.exports = app =>{
 
-  app.get('/registros', (req, res) =>{
-    res.send("teste");
+  app.get('/api/registros', (req, res) =>{
+    regis.listarTudo(res);
   });
 
 }

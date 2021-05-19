@@ -4,14 +4,14 @@ class Registros{
 
   listarTudo(res){
 
-    const sql = 'SELECT * FROM STORE_REGISTRARION';
-    conexao.query(sql, (erro, result)=>{
+    const sql = 'SELECT * FROM STORE_REGISTRATION';
+    conexao.query(sql, (erro, result) => {
       if(erro){
-        res.send(400).json(erro);
+        res.status(400).json(erro);
       }else{
-        res.send(200).json(result);
+        res.status(200).json(result);
       }
-    }) 
+    }); 
   }
 }
 
