@@ -11,6 +11,11 @@ module.exports = app =>{
 
     regis.listarId(res, parseInt(req.params.id));
   });
+
+  app.get('/api/registros/:nome', (req, res) =>{
+
+    regis.listaNome(res, req.params.nome);
+  });
 }
 
 

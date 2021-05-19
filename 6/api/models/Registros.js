@@ -25,6 +25,18 @@ class Registros{
       }
     });
   }
+
+  listarNome(res, nome){
+    const sql = `SELECT * FROM STORE_REGISTRATION WHERE NAME=${nome}`
+
+    conexao.query(sql, (erro, result) => {
+      if(erro){
+        res.status(400).json(erro);
+      }else{
+        res.status(200).json(result);
+      }
+    });
+  }
 }
 
 module.exports = new Registros;
