@@ -7,6 +7,6 @@
    "port":"3306",
    "user":"root",
    "password":"admin",
-   "banco":"evaluation"
+   "banco":"EVALUATION"
   }
 }

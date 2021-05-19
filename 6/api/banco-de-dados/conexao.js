@@ -7,7 +7,7 @@ const conexao = mysql.createConnection({
   port: config.get("db.port"),
   user: config.get("db.user"),
   password: config.get("db.password"),
-  database: config.get("db.evaluation"),
+  database: config.get("db.banco"),
 });
 
 module.exports = conexao;
