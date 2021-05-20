@@ -32,6 +32,11 @@ module.exports = app =>{
 
     regis.deletarRegistro(res, parseInt(req.params.id));
   })
+
+  app.patch('/api/registros/:id', (req, res) =>{
+
+    regis.atualizar(res, parseInt(req.params.id), req.body);
+  });
 }
 
 

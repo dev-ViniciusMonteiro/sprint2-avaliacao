@@ -62,6 +62,21 @@ class Registros{
       }
     })
   }
+  
+  atualizar(res, id, registro){
+
+    const sql = `UPDATE STORE_REGISTRATION SET ? WHERE ID=${id} `;
+
+    conexao.query(sql, registro, (erro,result)=>{
+      
+      if(erro){
+        res.status(400).json(erro);
+      }else{
+        res.status(200).json(result);
+      }
+    });
+      
+  }
 }
 
 module.exports = new Registros;
