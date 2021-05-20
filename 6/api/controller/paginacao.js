@@ -1,31 +1,24 @@
 const config = require('config');
 
-function paginacao(registro){
-  return(req, res, next) =>{
-    const pagina = parseInt(req.query.pagina);
-    const limite  = config.get("api.limite")
+function paginacao(obj, pag){
+  const limite = config.get("api.limite");
+  const resultados = {};
 
-
-    const indexInicial = (pagina-1)*limite;
-    const indexFinal = pagina*limite;
-
-    const resultados = {};
-    
-    if(indexFinal < registro.lenght){
-
-      resultados.next = {
-        page: page+1
-      }
-    };
-
-    if(indexInicial>0){
-      resultados.previous = {
-        page: page-1
-      }
-    };
-
-    resultados.registro = registro.slice(indexInicial, indexFinal);
+  if(pag>=1){
+    resultados.previous = {
+      page: pag-1
+    }
   }
+
+  if(Object.keys(obj).length==limite){
+    resultados.next = {
+      page: pag+1
+    }
+  }
+
+  resultados.registros = obj;
+
+  return resultados;
 }
 
 function definirPagina(bodyPagina){
