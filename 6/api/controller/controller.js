@@ -15,13 +15,15 @@ module.exports = app =>{
   });
 
   app.get('/api/registros/nome/:nome', (req, res) =>{
-    
-    regis.listarNome(res, JSON.stringify(req.params.nome));
+
+    const pagina = pag.definirPagina(req.query.pagina);
+    regis.listarNome(res, JSON.stringify(req.params.nome), pagina);
   });
 
   app.get('/api/registros/:dono/:tipo', (req, res) =>{
 
-    regis.listarVenda(res, JSON.stringify(req.params.dono), JSON.stringify(req.params.tipo));
+    const pagina = pag.definirPagina(req.query.pagina);
+    regis.listarVenda(res, JSON.stringify(req.params.dono), JSON.stringify(req.params.tipo), pagina);
   });
 
   app.post('/api/registros/', (req, res)=>{
