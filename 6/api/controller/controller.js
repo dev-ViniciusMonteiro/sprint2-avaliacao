@@ -18,6 +18,11 @@ module.exports = app =>{
     regis.listarNome(res, JSON.stringify(req.params.nome));
   });
 
+  app.get('/api/registros/:dono/:tipo', (req, res) =>{
+
+    regis.listarVenda(res, JSON.stringify(req.params.dono), JSON.stringify(req.params.tipo));
+  });
+
   app.post('/api/registros/', (req, res)=>{
     
     let registro = req.body;

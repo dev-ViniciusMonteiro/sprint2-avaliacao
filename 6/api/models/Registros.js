@@ -51,6 +51,19 @@ class Registros{
     });
   }
 
+  listarVenda(res, dono, tipo){
+
+    const sql = `SELECT * FROM STORE_REGISTRATION WHERE OWNER=${dono} AND BUSINESS_TYPE=${tipo}`;
+
+    conexao.query(sql, (erro, result)=>{
+      if(erro){
+        res.status(400).json(erro);
+      }else{
+        res.status(200).json(result);
+      }
+    });
+  }
+
   deletarRegistro(res, id){
     const sql = `DELETE FROM STORE_REGISTRATION WHERE ID=${id}`;
 
