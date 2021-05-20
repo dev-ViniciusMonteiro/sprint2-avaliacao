@@ -1,6 +1,8 @@
+//Importa os pacotes necessários para a configuração do custom express
 const express = require('express');
 const consign = require('consign');
 
+//pré carrega o script de json parser e o controller e exporta em um custom app 
 module.exports = () => {
   
   const app = express();
