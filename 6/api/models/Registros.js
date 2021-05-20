@@ -1,7 +1,6 @@
-const { json } = require("express");
 const config = require("config");
 const conexao = require("../banco-de-dados/conexao");
-const pag = require("../controller/paginacao");
+const pag = require("../helpers/paginacao");
 class Registros{
 
   adicionar(registro, res){

@@ -1,6 +1,6 @@
 const Registros = require("../models/Registros");
 const regis = require("../models/Registros");
-const pag = require("./paginacao");
+const pag = require("../helpers/paginacao");
 
 module.exports = app =>{
 
