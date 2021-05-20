@@ -27,6 +27,11 @@ module.exports = app =>{
     
     regis.adicionar(registro, res);
   });
+
+  app.delete('/api/registros/:id', (req, res)=>{
+
+    regis.deletarRegistro(res, parseInt(req.params.id));
+  })
 }
 
 
