@@ -2,6 +2,19 @@ const conexao = require("../banco-de-dados/conexao");
 
 class Registros{
 
+  adicionar(registro, res){
+    const sql = 'INSERT INTO STORE_REGISTRATION SET ?';
+
+    conexao.query(sql, registro, (erro, result)=>{
+
+      if(erro){
+        res.status(400).json(erro);
+      }else{
+        res.status(201).json(result);
+      }
+    });
+  }
+
   listarTudo(res){
 
     const sql = 'SELECT * FROM STORE_REGISTRATION';

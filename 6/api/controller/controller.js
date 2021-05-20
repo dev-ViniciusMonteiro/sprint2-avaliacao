@@ -1,3 +1,4 @@
+const Registros = require("../models/Registros");
 const regis = require("../models/Registros");
 
 module.exports = app =>{
@@ -16,6 +17,16 @@ module.exports = app =>{
 
     regis.listaNome(res, req.params.nome);
   });
+
+  app.post('/api/registros/', (req, res)=>{
+    
+    let registro = req.body;
+    if(registro.REGISTRATION_DATE == null){
+      registro.REGISTRATION_DATE = new Date();
+    }
+    
+    regis.adicionar(registro, res);
+  })
 }
 
 
