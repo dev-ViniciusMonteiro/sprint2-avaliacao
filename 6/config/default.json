@@ -1,6 +1,7 @@
 {
   "api":{
-    "porta":"3003"
+    "porta":"3003",
+    "limite":"10"
   },
   "db":{
    "host":"localhost",

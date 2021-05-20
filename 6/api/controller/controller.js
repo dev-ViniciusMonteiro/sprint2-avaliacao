@@ -1,11 +1,12 @@
 const Registros = require("../models/Registros");
 const regis = require("../models/Registros");
+const pag = require("./paginacao");
 
 module.exports = app =>{
 
   app.get('/api/registros', (req, res) =>{
-
-    regis.listarTudo(res);
+    const pagina = pag.definirPagina(req.query.pagina);
+    regis.listarTudo(res, pagina);
   });
 
   app.get('/api/registros/:id', (req, res) =>{
