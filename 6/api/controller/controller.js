@@ -1,11 +1,12 @@
-const Registros = require("../models/Registros");
 const regis = require("../models/Registros");
 const pag = require("../helpers/paginacao");
 
 module.exports = app =>{
 
   app.get('/api/registros', (req, res) =>{
+    
     const pagina = pag.definirPagina(req.query.pagina);
+    
     regis.listarTudo(res, pagina);
   });
 
@@ -17,18 +18,21 @@ module.exports = app =>{
   app.get('/api/registros/nome/:nome', (req, res) =>{
 
     const pagina = pag.definirPagina(req.query.pagina);
+    
     regis.listarNome(res, JSON.stringify(req.params.nome), pagina);
   });
 
   app.get('/api/registros/:dono/:tipo', (req, res) =>{
 
     const pagina = pag.definirPagina(req.query.pagina);
+    
     regis.listarVenda(res, JSON.stringify(req.params.dono), JSON.stringify(req.params.tipo), pagina);
   });
 
   app.post('/api/registros/', (req, res)=>{
     
     let registro = req.body;
+    
     if(registro.REGISTRATION_DATE == null){
       registro.REGISTRATION_DATE = new Date();
     }

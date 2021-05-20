@@ -1,17 +1,22 @@
 const config = require('config');
 
 function paginacao(obj, pag){
+
   const limite = config.get("api.limite");
   const resultados = {};
 
   if(pag>=1){
+  
     resultados.previous = {
+  
       page: pag-1
     }
   }
 
   if(Object.keys(obj).length==limite){
+  
     resultados.next = {
+  
       page: pag+1
     }
   }
@@ -24,11 +29,13 @@ function paginacao(obj, pag){
 function definirPagina(bodyPagina){
 
   let pagina = bodyPagina;
-    if(pagina==undefined){
-      pagina=0;
-    }else{
-      pagina = parseInt(bodyPagina);
-    }
+    
+  if(pagina==undefined){
+    pagina=0;
+  }else{
+    pagina = parseInt(bodyPagina);
+  }
+
   return pagina;
 }
 

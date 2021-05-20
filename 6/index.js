@@ -16,7 +16,9 @@ conexao.connect(erro =>{
   
     console.log("conectado com a db com sucesso");
     tabela.init(conexao);
+    
     app.listen(config.get("api.porta"), ()=>{
+    
       console.log(`O servidor está rodando na porta ${config.get("api.porta")}`)
     });
   }
