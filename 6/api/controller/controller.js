@@ -26,7 +26,7 @@ module.exports = app =>{
     }
     
     regis.adicionar(registro, res);
-  })
+  });
 }
 
 
